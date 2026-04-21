@@ -99,9 +99,13 @@ docker-compose down --rmi all --volumes --remove-orphans
 # 🔐 Configuração (.env)
 
 BOOTSTRAP_SERVERS=
+
 SASL_USERNAME=
+
 SASL_PASSWORD=
+
 DB_URI=
+
 TOPIC=temp_geladeira_ceara
 
 ---
