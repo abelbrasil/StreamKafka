@@ -86,6 +86,10 @@ docker-compose up -d
 
 http://localhost:8501
 
+### Tela do Painel
+
+![alt text](image.png)
+
 ## 7. Parar
 
 docker-compose down
