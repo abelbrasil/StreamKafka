@@ -29,6 +29,42 @@ Producer → Kafka → Consumers → Postgres → Dashboard
 - consumer_latest → estado atual
 - consumer_historico → histórico
 
+```
+StreamKafka/
+│
+├── producer/
+│   └── producer.py
+│
+├── consumer/
+│   ├── consumer_latest.py
+│   └── consumer_historico.py
+│
+├── dashboard/
+│   └── painel.py
+│
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+```
+Producer
+   ↓
+Kafka
+   ↓
+├── Consumer Histórico
+│       ↓
+│   PostgreSQL (histórico)
+│
+└── Consumer Latest
+        ↓
+    PostgreSQL (estado atual)
+        ↓
+    Streamlit Dashboard
+```
+
 ---
 
 # ⚙️ Componentes
