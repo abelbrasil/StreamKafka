@@ -1,3 +1,9 @@
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Kafka](https://img.shields.io/badge/Kafka-Confluent-orange)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
+![Streaming](https://img.shields.io/badge/Architecture-Streaming-green)
+
 # 📊 Monitoramento de Geladeiras em Tempo Real (Ceará)
 
 Projeto de arquitetura streaming em tempo real (<1s) para monitoramento de temperatura de geladeiras distribuídas geograficamente no estado do Ceará.
