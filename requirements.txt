@@ -1,0 +1,8 @@
+confluent-kafka
+sqlalchemy
+psycopg2-binary
+python-dotenv
+streamlit
+pandas
+streamlit-autorefresh
+plotly.express 

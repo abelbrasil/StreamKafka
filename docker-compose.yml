@@ -1,0 +1,31 @@
+services:
+
+  producer:
+    build: .
+    container_name: kafka-producer
+    command: python producer/producer.py
+    env_file:
+      - .env
+    restart: always
+
+  consumer_latest:
+    build: .
+    container_name: kafka-consumer-latest
+    command: python consumer/consumer_latest.py
+    env_file:
+      - .env
+    depends_on:
+      - producer
+    restart: always
+
+  dashboard:
+    build: .
+    container_name: kafka-dashboard
+    command: streamlit run dashboard/painel.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    depends_on:
+      - consumer_latest
+    restart: always
